@@ -1,6 +1,6 @@
 # Welcome to Lean's git source of OpenWrt and packages
 
-I18N: [English](README_EN.md) | [简体中文](README.md)
+I18N: [English](README_EN.md) | [简体中文](README.md) | [日本語](README_JA.md)
 
 ## Official Channels
 <!--
@@ -14,17 +14,15 @@ If you have technical questions for discussion or sharing, feel free to join the
 1. QQ Group: *OpenWRT Firmware Technical Research Group*, Group Number is `891659613`. Join the group: [Link](https://jq.qq.com/?_wv=1027&k=XL8SK5aC "Op固件技术研究群").
     -  [Click to download QQ client](https://im.qq.com/pcqq).
 2. Telegram Group: *OpenWRT Firmware Technical Research Group*. Join the group: [Link](https://t.me/JhKgAA6Hx1 "OP 编译官方大群").
-3. Rockchip **RK3568** precompiled firmware release (including H68K): [Click to download](https://github.com/coolsnowwolf/lede/releases/tag/20220716).
 
-<div align="left">
-    <a href="https://item.taobao.com/item.htm?spm=a230r.1.14.11.4bb55247rdHEAP&id=702787603594&ns=1&abbucket=17#detail
-">
-        <img style="margin: 0px 0px 0px 40px;" src="https://github.com/coolsnowwolf/lede/blob/master/doc/h68k.jpg?raw=true" width=600  />
-    </a>
-</div>
+## ArmSoM Sige Board Series Introduction
 
-4. Rockchip **RK3588** precompiled firmware release (including H68K): [Click to download](https://github.com/coolsnowwolf/lede/releases/tag/20230609).
+ArmSoM-Sige Series: Your All-in-One Powerhouse for Soft Routing, SBCs, Mini Servers, and Home Automation.
 
+[ ArmSoM Store ](https://www.aliexpress.com/store/1102800175)
+
+Buy Link ：
+[![sige1-en](doc/sige-en.jpg)](https://aliexpress.com/item/3256807356692995.html)
 
 ## Notice
 <!--
@@ -227,7 +225,7 @@ PS > git clone git@github.com:coolsnowwolf/lede.git <your_local_lede_path>
 2. 安装 Homebrew：
 
    ```bash
-   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
    ```
 
 3. 使用 Homebrew 安装工具链、依赖与基础软件包:
@@ -265,6 +263,9 @@ PS > git clone git@github.com:coolsnowwolf/lede.git <your_local_lede_path>
    brew install gcc@11
    ```
 4. Update your system environment:
+
+   - mac with intel chip
+
    ```bash
    echo 'export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"' >> ~/.bashrc
    echo 'export PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"' >> ~/.bashrc
@@ -273,6 +274,18 @@ PS > git clone git@github.com:coolsnowwolf/lede.git <your_local_lede_path>
    echo 'export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"' >> ~/.bashrc
    echo 'export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"' >> ~/.bashrc
    echo 'export PATH="/usr/local/opt/make/libexec/gnubin:$PATH"' >> ~/.bashrc
+   ```
+
+   - mac with apple chip
+   
+   ```zsh
+   echo 'export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"' >> ~/.bashrc
+   echo 'export PATH="/opt/homebrew/opt/findutils/libexec/gnubin:$PATH"' >> ~/.bashrc
+   echo 'export PATH="/opt/homebrew/opt/gnu-getopt/bin:$PATH"' >> ~/.bashrc
+   echo 'export PATH="/opt/homebrew/opt/gnu-tar/libexec/gnubin:$PATH"' >> ~/.bashrc
+   echo 'export PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"' >> ~/.bashrc
+   echo 'export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"' >> ~/.bashrc
+   echo 'export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"' >> ~/.bashrc
    ```
 5. Reload your shell profile `source ~/.bashrc && bash`, then you can compile normally like Linux.
 
